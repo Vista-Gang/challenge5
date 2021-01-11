@@ -1,5 +1,5 @@
 <?php
-    $sql = "SELECT * FROM tb_menuitems WHERE type = 'food' AND language = 'english'";
+    $sql = "SELECT * FROM tb_menuitems WHERE type = 'food' AND language = 'english' ORDER BY productname ASC";
     include_once("connection.inc.php");
 
         $stmt = $pdo->prepare($sql);

@@ -1,4 +1,5 @@
 <?php
+function connection() {
     $dbhost     = "localhost";
     $dbname     = "db_kantine";
     $dbuser     = "db_kantine";
@@ -15,9 +16,13 @@
         PDO::ATTR_EMULATE_PREPARES   => false,
     ];
     try {
-        $pdo = new PDO($conn, $dbuser, $dbpass, $options); // create connection
+        $pdo = new PDO($conn, $dbuser, $dbpass, $options); // create 
+        return $pdo;
         //print_r($pdo);
     }
     catch (\PDOException $e) {
         throw new \PDOException($e->getMessage(), (int)$e->getCode());
     }
+}
+
+$pdo = connection();

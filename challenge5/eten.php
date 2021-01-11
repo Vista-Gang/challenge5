@@ -2,6 +2,8 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Redressed">
+	<link rel="stylesheet" href="ShoppingcartTest/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Vista College</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
@@ -10,6 +12,8 @@
     <link rel="stylesheet" href="css/menustyle.css">
 </head>
 <body>
+    <?php session_start();
+    print_r($_SESSION); ?>
     <!-- Navbar -->
     <div class="navbar">
         <div class="container flex">
@@ -37,6 +41,10 @@
                     include_once("database/selectfood.inc.php");
                 ?>
             </div>
+            <section class="section">
+			<h2 class="text-center">ITEMS IN CART</h2>
+			<div class="cart"></div>
+		</section>
         </div>
     </section>
     <!-- Stats -->
@@ -117,5 +125,6 @@
             <a href="https://www.instagram.com/vistacollege_ict/"><i class="fab fa-instagram fa-2x"></i></a>
             <a href="https://twitter.com/VISTAcollege_"><i class="fab fa-twitter fa-2x"></i></a>   
     </div>
+    <script src="ShoppingcartTest/pageWithProducts.js"></script>
 </body>
 </html>
