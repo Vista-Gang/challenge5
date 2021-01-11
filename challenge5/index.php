@@ -101,8 +101,9 @@
                 <?php
 
                 include_once("./database/selectfaq.inc.php"); 
-
+    
                 ?>
+                
             </p>
         </div>
 
