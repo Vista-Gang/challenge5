@@ -44,7 +44,7 @@ addToCartButtonsDOM.forEach(addToCartButtonDOM => {
 });
 
 function addProductToDb(id) {
-  alert(id);
+  //alert(id);
   var count = 32;
   //var count = document.getElementById('countbox').value;
   var xhttp = new XMLHttpRequest();

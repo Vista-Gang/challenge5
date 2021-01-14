@@ -57,6 +57,7 @@ if (isset($_GET['logout'])) {
 						<a href="../../index.php?logout='1'" style="color: red;">logout</a>
                        &nbsp; <a href="create_user.php"> + add user</a>
 					   <a href="../../index.php">Home</a>
+					   <button onclick="deleteDb()">DELETE FULL DATABASE</button>
 					</small>
 
 				<?php endif ?>
@@ -72,6 +73,13 @@ if (isset($_GET['logout'])) {
 				}
 				include_once("../../database/connection.inc.php");
 				?>
+
+				<script type="text/javascript">
+					function deleteDb(){
+						alert("SIKE YOU THOUGHT");
+						header("Location: http://raikoboyen.nl");
+					}
+				</script>
 		</div>
 	</div>
 </body>

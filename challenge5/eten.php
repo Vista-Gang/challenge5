@@ -13,7 +13,7 @@
 </head>
 <body>
     <?php session_start();
-    print_r($_SESSION); ?>
+    //print_r($_SESSION); ?>
     <!-- Navbar -->
     <div class="navbar">
         <div class="container flex">
@@ -41,10 +41,6 @@
                     include_once("database/selectfood.inc.php");
                 ?>
             </div>
-            <section class="section">
-			<h2 class="text-center">ITEMS IN CART</h2>
-			<div class="cart"></div>
-		</section>
         </div>
     </section>
     <!-- Stats -->
@@ -106,7 +102,7 @@
         </div>
     </section>
     <!-- Footer -->
-    <div class="footer bg-dark py-5">
+    <!--<div class="footer bg-dark py-5">
         <div class="container grid grid-3">
             <div>
                 <h1>Vista
@@ -127,4 +123,4 @@
     </div>
     <script src="ShoppingcartTest/pageWithProducts.js"></script>
 </body>
-</html>
+</html> -->

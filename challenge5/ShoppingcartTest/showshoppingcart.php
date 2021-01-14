@@ -65,5 +65,3 @@
         }
 
     </script>
-    
-    update tb_shoppingcart set count=$aantal where id = $id
