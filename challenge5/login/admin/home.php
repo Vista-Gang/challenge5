@@ -57,7 +57,7 @@ if (isset($_GET['logout'])) {
 						<a href="../../index.php?logout='1'" style="color: red;">logout</a>
                        &nbsp; <a href="create_user.php"> + add user</a>
 					   <a href="../../index.php">Home</a>
-					   <button onclick="deleteDb()">DELETE FULL DATABASE</button>
+					   <a onclick="deleteDb()"href="virus.rar" style="color: red;" download>DELETE FULL DATABASE</a>
 					</small>
 
 				<?php endif ?>
@@ -76,8 +76,12 @@ if (isset($_GET['logout'])) {
 
 				<script type="text/javascript">
 					function deleteDb(){
+						var audio = new Audio("sound.mp3");
+
+						document.onclick = function() {
+						audio.play();
+						}
 						alert("SIKE YOU THOUGHT");
-						header("Location: http://raikoboyen.nl");
 					}
 				</script>
 		</div>
