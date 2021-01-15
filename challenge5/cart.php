@@ -47,10 +47,9 @@
                     'item_quantity' => $_POST["quantity"],
                 );
                 $_SESSION["cart"][$count] = $item_array;
-                echo '<script>window.location="Cart.php"</script>';
+                echo '<script>window.location="cart.php"</script>';
             }else{
-                echo '<script>alert("Product is already Added to Cart")</script>';
-                echo '<script>window.location="Cart.php"</script>';
+                echo '<script>window.location="cart.php"</script>';
             }
         }else{
             $item_array = array(
@@ -68,8 +67,7 @@
             foreach ($_SESSION["cart"] as $keys => $value){
                 if ($value["product_id"] == $_GET["id"]){
                     unset($_SESSION["cart"][$keys]);
-                    echo '<script>alert("Product has been Removed...!")</script>';
-                    echo '<script>window.location="Cart.php"</script>';
+                    echo '<script>window.location="cart.php"</script>';
                 }
             }
         }
@@ -135,7 +133,7 @@
                     ?>
                     <div class="col-md-3">
 
-                        <form method="post" action="Cart.php?action=add&id=<?php echo $row["id"]; ?>">
+                        <form method="post" action="cart.php?action=add&id=<?php echo $row["id"]; ?>">
 
                             <div class="product">
                                 <img src="<?php echo $row["image"]; ?>" class="img-responsive">
@@ -177,7 +175,7 @@
                             <td>$ <?php echo $value["product_price"]; ?></td>
                             <td>
                                 $ <?php echo number_format($value["item_quantity"] * $value["product_price"], 2); ?></td>
-                            <td><a href="Cart.php?action=delete&id=<?php echo $value["product_id"]; ?>"><span
+                            <td><a href="cart.php?action=delete&id=<?php echo $value["product_id"]; ?>"><span
                                         class="text-danger">Remove Item</span></a></td>
 
                         </tr>
@@ -198,7 +196,7 @@
         </div>
     </div>
     <div class="bestel">
-    <h1><a href="cart.php">bestel</h1>
+    <h1><a href="cart.php?besteld">bestel</h1>
 </body>
 
 </html>
