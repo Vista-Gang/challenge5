@@ -2,28 +2,27 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <?php include("./database/like.inc.php"); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Vista College</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/utilities.css">
-    <link rel="stylesheet" href="css/aboutus.css">
-    <link rel="stylesheet" href="css/menustyle.css">
-    <link rel="stylesheet" href="css/drinkstyle.css">
+    <link rel="stylesheet" href="css/indexstyle.css">
 </head>
 <body>
     <!-- Navbar -->
     <div class="navbar">
         <div class="container flex">
             <div class="english">
-                <a href="drinksEN.php">
+                <a href="home_eng.php">
                     <img src="images/english.png" alt="">
             </div>
             <h1 class="logo">Vista College</h1>
             <nav>
                 <ul>
-                <li><a href="home_eng.php">Home</a></li>
-                <li><a href="cart.php">Eten</a></li>
-                <li><a href="drinksEN.php">Drinken</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="eten.php">Eten</a></li>          
+                    <li><a href="drinken.php">Drinken</a></li>
                 </ul>
             </nav>
             <a class="btn btn-secondary" href="login/login.php">Login</a></li>
@@ -33,8 +32,28 @@
     <section class="showcase">
         <div class="container grid">
             <div class="showcase-text">
-            <h1><b>Menu</b></h1>
-              <?php  include_once("database/selectdrinks.inc.php"); ?>
+                <h1>Over ons</h1>
+                    <p>En jij bent waarschijnlijk op zoek naar een lekkere maaltijd.
+                    Een makkelijk snel maaltijd waarmee jij al je energie terug van krijgt en direct weer kan studeren of werken.
+                    Met goedkope maaltijden en drinken.
+                </p>
+                <a href="aboutusnl.php" class="btn btn-outline">Lees meer</a>
+            </div>
+            <div class="showcase-form card" action="contact.php">
+                <h2>Stuur ons een mail</h2>
+                <form>
+                    <div class="form-control">
+                        <input type="text" name="name" placeholder="Je volledige naam">
+                    </div>
+                    <div class="form-control">
+                        <input type="email" name="email" placeholder="Je E-mail adress">
+                        <input type="hidden" name="frmContact" placeholder="">
+                    </div>
+                    <div class="form-control">
+                        <input type="text" name="subject" placeholder="Beschrijf hier kort je bericht">
+                    </div>
+                    <input type="submit" value="submit" class="btn btn-primary">
+                </form>
             </div>
         </div>
     </section>
@@ -79,22 +98,16 @@
                 FAQ
             </h2>
             <p class="md2 text-center my-2">
-                1. Is de kantine open in verband met corona? (covid-19) <br>
-                Nee de kantine mag niet open tot dat het virus weg is. <br> <br>
 
-                2. Kan je met pinpas betalen? <br>
-                Ja je kan met je pinpas betalen. <br> <br>
+                <?php
 
-                3. Waar is de kantine? <br>
-                De kantine is in het West gebouw<br> <br>
-
-                4. Is er vegetarisch eten? <br>
-                Ja er zijn vegetarische opties. <br> <br>
-
-                5. Mogen mensen van buiten af ook in de kantine komen? <br>
-                Nee het is bedoeld voor de leraren en de studenten. <br> <br>
+                include_once("./database/selectfaq.inc.php"); 
+    
+                ?>
+                
             </p>
         </div>
+
     </section>
     <!-- Footer -->
     <div class="footer bg-dark py-5">
@@ -106,9 +119,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="eten.php">Eten</a></li>          
-                <li><a href="drinken.php">Drinken</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="eten.html">Eten</a></li>
+                <li><a href="drinken.html">Drinken</a></li>
             </ul>
         </nav>
         <div class="social">

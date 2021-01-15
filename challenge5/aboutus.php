@@ -21,7 +21,7 @@
             <nav>
                 <ul>
                     <li><a href="home_eng.php">Home</a></li>
-                    <li><a href="foodEN.php">Food</a></li>          
+                    <li><a href="cart.php">Food</a></li>          
                     <li><a href="drinksEN.php">Drinks</a></li>
                 </ul>
             </nav>

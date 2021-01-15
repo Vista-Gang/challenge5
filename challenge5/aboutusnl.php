@@ -20,7 +20,7 @@
             <nav>
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="eten.php">Eten</a></li>          
+                    <li><a href="cart.php">Eten</a></li>          
                     <li><a href="drinken.php">Drinken</a></li>
                 </ul>
             </nav>

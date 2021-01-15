@@ -1,77 +1,101 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Vista College</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/utilities.css">
-    <link rel="stylesheet" href="css/aboutus.css">
-    <link rel="stylesheet" href="css/menustyle.css">
-    <link rel="stylesheet" href="css/drinkstyle.css">
+    <link rel="stylesheet" href="css/indexstyle.css">
 </head>
 <body>
     <!-- Navbar -->
     <div class="navbar">
         <div class="container flex">
-            <div class="english">
-                <a href="drinksEN.php">
-                    <img src="images/english.png" alt="">
+            <div class="dutch">
+                <a href="index.php"> 
+                    <img src="images/dutch.png" alt="">
             </div>
             <h1 class="logo">Vista College</h1>
             <nav>
                 <ul>
-                <li><a href="home_eng.php">Home</a></li>
-                <li><a href="cart.php">Eten</a></li>
-                <li><a href="drinksEN.php">Drinken</a></li>
+                    <li><a href="home_eng.php">Home</a></li>
+                    <li><a href="foodEN.php">Food</a></li>
+                    <li><a href="drinksEN.php">Drinks</a></li>
                 </ul>
             </nav>
             <a class="btn btn-secondary" href="login/login.php">Login</a></li>
         </div>
     </div>
+
     <!-- Showcase -->
     <section class="showcase">
         <div class="container grid">
             <div class="showcase-text">
-            <h1><b>Menu</b></h1>
-              <?php  include_once("database/selectdrinks.inc.php"); ?>
+                <h1>About us</h1>
+                    <p>And you are probably looking for a nice meal.
+                    An easy quick meal that gives you all your energy back and can immediately study or work again.
+                    With cheap meals and drinks.
+                </p>
+                <a href="aboutus.php" class="btn btn-outline">Read more</a>
+            </div>
+
+            <div class="showcase-form card">
+                <h2>Send us an email</h2>
+                <form>
+                    <div class="form-control">
+                        <input type="text" name="name" placeholder="Your full name">
+                    </div>
+                    <div class="form-control">
+                        <input type="email" name="email" placeholder="Your E-mail adress">
+                    </div>
+                    <div class="form-control">
+                        <input type="text" name="subject" placeholder="Your message in short">
+                    </div>
+                    <input type="submit" value="submit" class="btn btn-primary">
+                </form>
             </div>
         </div>
     </section>
+
     <!-- Stats -->
     <section class="stats">
         <div class="container">
             <h3 class="stats-heading text-center my-1">
-                Meest gekochte gerechten en dranken
+            Most bought dishes and drinks           
             </h3>
+
             <div class="grid grid-3 text-center my-4">
                 <div>
                     <img src="images/frikandel.png" alt="">
-                    <h3>Gerechten</h3>
+                    <h3>Dishes</h3>
                 </div>
                 <div>
                     <img src="images/cola.png" alt="">
-                    <h3>Dranken</h3>
+                    <h3>Drinks</h3>
                 </div>
                 <div>
                     <div class="englishfood.png">
                     <img src="images/british.png" alt="">
-                    <h3>Brits</h3>
+                    <h3>British</h3>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Cloud -->
     <section class="cloud bg-primary my-2 py-2">
         <div class="container grid">
             <div class="text-center">
                 <h2 class="lg">Vista College</h2>
-                <p class="lead my-1">Link naar Vista College home</p>
+                <p class="lead my-1">Link to Vista College home</p>
                     <a href="https://vistacollege.nl/" class="btn btn-outline">Vista Home</a>
             </div>
             <img src="images/vista.png" alt="">
         </div>
     </section>
+
     <section>
         <!-- Languages -->
         <div class="languages">
@@ -79,23 +103,14 @@
                 FAQ
             </h2>
             <p class="md2 text-center my-2">
-                1. Is de kantine open in verband met corona? (covid-19) <br>
-                Nee de kantine mag niet open tot dat het virus weg is. <br> <br>
 
-                2. Kan je met pinpas betalen? <br>
-                Ja je kan met je pinpas betalen. <br> <br>
+                <?php include_once("./database/selectfaqEN.inc.php"); ?>
 
-                3. Waar is de kantine? <br>
-                De kantine is in het West gebouw<br> <br>
-
-                4. Is er vegetarisch eten? <br>
-                Ja er zijn vegetarische opties. <br> <br>
-
-                5. Mogen mensen van buiten af ook in de kantine komen? <br>
-                Nee het is bedoeld voor de leraren en de studenten. <br> <br>
             </p>
+            </div>  
         </div>
     </section>
+
     <!-- Footer -->
     <div class="footer bg-dark py-5">
         <div class="container grid grid-3">
@@ -106,9 +121,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="eten.php">Eten</a></li>          
-                <li><a href="drinken.php">Drinken</a></li>
+                <li><a href="home_eng.php">Home</a></li>
+                <li><a href="foodEN.php">Food</a></li>
+                <li><a href="drinksEN.php">Drinks</a></li>
             </ul>
         </nav>
         <div class="social">

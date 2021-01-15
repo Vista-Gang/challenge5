@@ -7,23 +7,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/aboutus.css">
-    <link rel="stylesheet" href="css/menustyle.css">
-    <link rel="stylesheet" href="css/drinkstyle.css">
 </head>
 <body>
     <!-- Navbar -->
     <div class="navbar">
         <div class="container flex">
             <div class="english">
-                <a href="drinksEN.php">
+                <a href="aboutus.php">
                     <img src="images/english.png" alt="">
             </div>
             <h1 class="logo">Vista College</h1>
             <nav>
                 <ul>
-                <li><a href="home_eng.php">Home</a></li>
-                <li><a href="cart.php">Eten</a></li>
-                <li><a href="drinksEN.php">Drinken</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="eten.php">Eten</a></li>          
+                    <li><a href="drinken.php">Drinken</a></li>
                 </ul>
             </nav>
             <a class="btn btn-secondary" href="login/login.php">Login</a></li>
@@ -33,8 +31,17 @@
     <section class="showcase">
         <div class="container grid">
             <div class="showcase-text">
-            <h1><b>Menu</b></h1>
-              <?php  include_once("database/selectdrinks.inc.php"); ?>
+                <h1>Over ons</h1>
+                    <p>En jij bent waarschijnlijk op zoek naar een lekkere maaltijd.
+                       Een makkelijk snel maaltijd waarmee jij al je energie terug van krijgt en direct weer kan studeren of werken.
+                       Met goedkope maaltijden en drinken.
+                       Jij bent klaar voor de volgende stap. Voor de start van je carrière. Je staat open voor nieuwe uitdagingen.
+                       Je hebt zin om je handen uit de mouwen te steken en om de juiste maaltijden te eten.
+                       Bij het VISTA college Kantine ben je dan aan het juiste adres. We leiden je deskundig en met persoonlijke aandacht op.
+                       We prikkelen je nieuwsgierigheid. We motiveren je om ontwikkelingen en veranderingen te omarmen. Om te leren. Om te groeien.
+                       Om verder te kijken dan je neus lang is. We stomen je kortom klaar voor de toekomst.
+                       Jouw toekomst.
+                    </p>
             </div>
         </div>
     </section>

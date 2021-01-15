@@ -22,7 +22,7 @@
             <nav>
                 <ul>
                 <li><a href="home_eng.php">Home</a></li>
-                <li><a href="cart.php">Eten</a></li>
+                <li><a href="foodEN.php">Eten</a></li>
                 <li><a href="drinksEN.php">Drinken</a></li>
                 </ul>
             </nav>

@@ -2,28 +2,31 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Redressed">
+	<link rel="stylesheet" href="ShoppingcartTest/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Vista College</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/aboutus.css">
     <link rel="stylesheet" href="css/menustyle.css">
-    <link rel="stylesheet" href="css/drinkstyle.css">
 </head>
 <body>
+    <?php session_start();
+    //print_r($_SESSION); ?>
     <!-- Navbar -->
     <div class="navbar">
         <div class="container flex">
             <div class="english">
-                <a href="drinksEN.php">
+                <a href="foodEN.php">
                     <img src="images/english.png" alt="">
             </div>
             <h1 class="logo">Vista College</h1>
             <nav>
                 <ul>
-                <li><a href="home_eng.php">Home</a></li>
-                <li><a href="cart.php">Eten</a></li>
-                <li><a href="drinksEN.php">Drinken</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="eten.php">Eten</a></li>          
+                    <li><a href="drinken.php">Drinken</a></li>
                 </ul>
             </nav>
             <a class="btn btn-secondary" href="login/login.php">Login</a></li>
@@ -34,7 +37,9 @@
         <div class="container grid">
             <div class="showcase-text">
             <h1><b>Menu</b></h1>
-              <?php  include_once("database/selectdrinks.inc.php"); ?>
+                <?php
+                    include_once("database/selectfood.inc.php");
+                ?>
             </div>
         </div>
     </section>
@@ -97,7 +102,7 @@
         </div>
     </section>
     <!-- Footer -->
-    <div class="footer bg-dark py-5">
+    <!--<div class="footer bg-dark py-5">
         <div class="container grid grid-3">
             <div>
                 <h1>Vista
@@ -116,5 +121,6 @@
             <a href="https://www.instagram.com/vistacollege_ict/"><i class="fab fa-instagram fa-2x"></i></a>
             <a href="https://twitter.com/VISTAcollege_"><i class="fab fa-twitter fa-2x"></i></a>   
     </div>
+    <script src="ShoppingcartTest/pageWithProducts.js"></script>
 </body>
-</html>
+</html> -->

@@ -14,14 +14,14 @@
     <div class="navbar">
         <div class="container flex">
             <div class="english">
-                <a href="eten.php">
+                <a href="cart.php">
                     <img src="images/dutch.png" alt="">
             </div>
             <h1 class="logo">Vista College</h1>
             <nav>
                 <ul>
                 <li><a href="home_eng.php">Home</a></li>
-                <li><a href="foodEN.php">Food</a></li>
+                <li><a href="cart.php">Food</a></li>
                 <li><a href="drinksEN.php">Drinks</a></li>
                 </ul>
             </nav>
